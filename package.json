@@ -1,29 +1,45 @@
 {
-  "name": "learn-fullstack-javascript",
+  "name": "fulljs",
   "version": "1.0.0",
-  "description": "For an up-to-date configuration guide: [jscomplete.com/reactful](https://jscomplete.com/reactful)",
+  "description": "Learning Fullstack JavaScript Development: MongoDB, Node.js, React.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node server.js --ignore public/",
+    "dev": "webpack -wd"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jscomplete/learn-fullstack-javascript.git"
+    "url": "git+https://github.com/andresitorusz/learn-fullstack-javascript.git"
   },
   "author": "",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/jscomplete/learn-fullstack-javascript/issues"
+    "url": "https://github.com/andresitorus/learn-fullstack-javascript/issues"
   },
-  "homepage": "https://github.com/jscomplete/learn-fullstack-javascript#readme",
+  "homepage": "https://github.com/andresitorusz/learn-fullstack-javascript#readme",
   "dependencies": {
+    "axios": "^0.21.0",
+    "ejs": "^2.7.4",
     "express": "^4.17.1",
+    "json-loader": "^0.5.7",
     "mongodb": "^3.6.3",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "node-sass-middleware": "^0.11.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
-    "webpack": "^5.6.0",
-    "webpack-cli": "^4.2.0"
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.21.5",
+    "nodemon": "^1.19.4",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
