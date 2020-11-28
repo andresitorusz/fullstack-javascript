@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import ContestList from './ContestList';
 
-const pushState = (obj, url) => 
+const pushState = (obj, url) =>
   window.history.pushState(obj, '', url);
 
 class App extends React.Component {
@@ -18,15 +18,15 @@ class App extends React.Component {
   }
   fetchContest = (contestId) => {
     pushState(
-      { currentContestId, contestId },
+      { currentContestId: contestId },
       `/contest/${contestId}`
-    )
-  }
+    );
+  };
   render() {
     return (
       <div className="App">
         <Header message={this.state.pageHeader} />
-        <ContestList 
+        <ContestList
           onContestClick={this.fetchContest}
           contests={this.state.contests} />
       </div>
